@@ -150,15 +150,6 @@ export default class OrderConfirm extends Component {
                             this.setState({ sended: false });
                             this.setState({ modalVisible: false });
                         }).catch((error) => {
-                            var bot_token = "559543795:AAGObPiD_qnE638gtaRua3mrD0mI2F_c_a8";
-                            return fetch("https://api.telegram.org/bot" + bot_token + "/sendMessage?chat_id=@jomtest&parse_mode=Markdown&text=" + JSON.stringify(data))
-                                .then((response) => response.json())
-                                .then((responseJson) => {
-
-                                })
-                                .catch((error) => {
-
-                                });
                         });
                 } else {
                     this.setState({ showDialog: true });
